@@ -2,38 +2,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Contact Us - My Restaurant</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon"  href="Images/icon.png">
+    <title>Contact Us - Anton's</title>
+
 </head>
+
 <body>
+
     <header>
         <h1>Contact Us</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="reservation.html">Reservation</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <img src="Images/contact.png" alt="Contact Page Image">
     </header>
 
     <main>
+
         <section id="contact-info">
-            <h2>Contact Information</h2>
+            <h2>Contact</h2>
             <address>
-                <p><strong>My Restaurant</strong></p>
+                <p><strong>Anton's</strong></p>
                 <p>34 Main Street</p>
-                <p>JP Nagar, Karnataka 560078</p>
-                <p>Email: restaurant-name@gmail.com</p>
+                <p>JP Nagar, Bengaluru-560078</p>
+                <p>Email: antons@gmail.com</p>
                 <p>Phone: +91 9685741230</p>
             </address>
         </section>
 
         <section id="contact-form">
             <h2>Send Us a Message</h2>
-            <form>
+            <form onsubmit="handleSubmit(); return false;">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -52,12 +49,37 @@
 
         <section id="location-map">
             <h2>Visit Us</h2>
-            <p>We are located in the heart of JP Nagar. Come and experience our culinary delights.</p>
+            <p>We are located in the heart of Bengaluru. Come and experience our culinary delights.</p>
         </section>
+
+        <section id="background-color">
+            <h2>Change Background Color</h2>
+            <p>Select a color from the dropdown to change the background color.</p>
+            <select onchange="changeBackgroundColor(this.value)">
+                <option value="">Select a color</option>
+                <option value="lightblue">Light Blue</option>
+                <option value="lightgreen">Light Green</option>
+                <option value="lightpink">Light Pink</option>
+            </select>
+        </section>   
+
     </main>
 
     <footer>
-        <p>&copy; 2023 My Restaurant. All rights reserved.</p>
+        <p>&copy; 2024 Anton's. All rights reserved.</p>
     </footer>
+
+    <script>
+
+        function handleSubmit() {
+            alert("Thank you for contacting us! We will get back to you soon.");
+        }
+
+        function changeBackgroundColor(selectedColor) {
+            document.body.style.backgroundColor = selectedColor;
+        }
+
+    </script>
+
 </body>
 </html>
