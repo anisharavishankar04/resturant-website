@@ -2,6 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #e6e0d6;
 }
 
 main {
@@ -10,10 +11,20 @@ main {
     justify-content: space-around;
     padding: 20px;
 }
+#anton{
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+    color: #fff;
+    margin-top: .5px;
+    margin-bottom: .5px;
+}
+#address{
+    font-family: 'Lato', sans-serif;
+}
 
 .dish {
     width: 25%;
-    margin: 10px;
+    margin: 5px;
     padding: 20px;
     border: 1px solid #ddd;
     text-align: center;
@@ -28,7 +39,7 @@ img {
     height: auto;
 }
 header {
-    background-color: #333;
+    background-color: #540b0e;
     color: #fff;
     padding: 1em;
     text-align: center;
@@ -38,7 +49,7 @@ header {
 }
 
 nav {
-    background-color: #444;
+    background-color:#e6e0d6;
     padding: 1em;
     text-align: center;
     display: flex;
@@ -47,10 +58,11 @@ nav {
 }
 
 nav a {
-    color: #fff;
+    color: #370617;
+    border: 2px solid #370617;
     text-decoration: none;
     padding: 1em;
-    margin: 0.5em;
+    margin: 1px;
     font-weight: bold;
 }
 
