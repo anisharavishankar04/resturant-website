@@ -31,6 +31,15 @@ main {
     float:left;
 }
 
+.ant{
+        width: 28%;
+        margin: 10px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        text-align: center;
+        float:left;
+}
+
 #featured-dishes{
     display:flex;
 }
@@ -55,6 +64,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    transition: all 0.3s ease;
 }
 
 nav a {
@@ -64,6 +74,12 @@ nav a {
     padding: 1em;
     margin: 1px;
     font-weight: bold;
+    transition: all 0.3s ease;
+}
+nav a:hover {
+    transform: scale(1.1);
+    background-color: #000000;
+    color: #fff;
 }
 
 
@@ -82,4 +98,3 @@ footer {
     padding: 10px;
     text-align: center;
 }
-
