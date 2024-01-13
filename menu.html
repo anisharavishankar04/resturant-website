@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,42 +9,136 @@
     <title>Menu - Anton's</title>
 
     <style>
-        .button-container {
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6e0d6;
+        }
+        nav {
+            background-color:#e6e0d6;
+            padding: 1em;
+            text-align: center;
             display: flex;
+            align-items: center;
             justify-content: space-around;
-            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        nav a {
+            color: #370617;
+            border: 2px solid #370617;
+            text-decoration: none;
+            padding: 1em;
+            margin: 1px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            transform: scale(1.1);
+            background-color: #000000;
+            color: #fff;
+        }
+
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        h1 {
+            margin: 20px 0;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        p {
+            margin: 0 20px 20px;
+            text-align: center;
+            color: #555;
         }
 
         .image-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
+            align-items: center;
             margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .image-container img {
+            width: 30%;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            flex-wrap: wrap;
         }
 
         .menu-button {
             padding: 10px 20px;
-            background-color: #333;
+            background-color: #540b0e;
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            font-family: "Butler Bold";
+            margin: 5px;
+            display: block;
         }
 
         .menu-button:hover {
             background-color: #555;
         }
 
-        .image-container {
+        .menu {
+            width: 100%;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dish {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            justify-content: space-around;
             margin: 20px 0;
         }
-        .image-container img {
-            width: 30%; 
+
+        .dish img {
+            width: 40%;
             border-radius: 5px;
         }
+
+        .dish-content {
+            width: 40%;
+            text-align: left;
+            padding: 10px;
+        }
+
+        footer {
+            background-color: #540b0e;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .appetizer-category {
+            width: 48%; 
+            margin: 0 1%; 
+            float: left; 
+            box-sizing: border-box; 
+        }
+        .appetizer-category p {
+            text-align: center; 
+}
+
+
     </style>
 
 </head>
@@ -52,7 +147,7 @@
 
     <header>
         <a href="index.html"><img src="Images/restlogo.png" alt="Restaurant Logo"></a>
-        <h1 style="font-family: 'Lato', sans-serif;">Explore Our Culinary Creations</h1>
+        <h1 style="font-family: 'Lato', sans-serif;">Menu</h1>
         <nav>
             <ul>
                 <li><a href="menu.html">Menu</a></li>
@@ -63,7 +158,6 @@
         </nav>
     </header>
 
-
     <main>
 
         <div class="image-container">
@@ -72,87 +166,263 @@
             <img src="Images/menu3.png" alt="Menu Image 3">
         </div>
         
-        <h1>MENUS</h1>
         <p>Our kitchen is rooted in an appreciation for exceptional homegrown ingredients, thoughtful-yet-simple preparations, and a passion for breathing new life into Old Indian recipes. Desserts borrow from treasured family recipes extending back four generations. In addition to the menus listed here, we offer a selection of daily specials.</p>
         
         <div class="button-container">
             <a href="#appetizers" class="menu-button">Appetizers</a>
-            <a href="#main-courses" class="menu-button">Main-Courses</a>
+            <a href="#main-courses" class="menu-button">Main Courses</a>
             <a href="#desserts" class="menu-button">Desserts</a>
             <a href="#beverages" class="menu-button">Beverages</a>
-            <a href="brunch" class="menu-button">Brunch</a>
         </div>
-
-        <section id="appetizers">
-            <h2>Appetizers</h2>
-            <div class="dish">
-                <img src="images/appetizer1.jpg" alt="Appetizer 1">
-                <h3>Caprese Salad</h3>
-                <p>Fresh tomatoes, mozzarella, and basil drizzled with balsamic glaze.</p>
+        <section id="appetizers" class="menu">
+            <h2 style="text-align:center">APPETIZERS</h2>
+        
+            <div class="appetizer-category">
+                <h3 style="text-align:center">Vegetarian</h3>
+                <p>
+                    Caprese Skewers - $8.99<br>
+                    Fresh mozzarella, cherry tomatoes, and basil drizzled with balsamic glaze.<br><br>
+        
+                    Spinach and Artichoke Dip - $10.99<br>
+                    Creamy dip with spinach, artichokes, and melted cheese, served with tortilla chips.<br><br>
+        
+                    Vegetable Spring Rolls - $7.99<br>
+                    Crispy spring rolls filled with a mix of vegetables.<br><br>
+        
+                    Bruschetta - $9.99<br>
+                    Toasted bread topped with diced tomatoes, garlic, and basil.<br><br>
+        
+                    Stuffed Mushrooms - $11.99<br>
+                    Mushrooms stuffed with a savory mixture of breadcrumbs, herbs, and cheese.<br><br>
+        
+                    Hummus with Pita Bread - $8.99<br>
+                    Chickpea-based dip served with warm pita bread.<br><br>
+        
+                    Crispy Zucchini Fritters - $9.99<br>
+                    Zucchini slices coated in a crispy batter, served with a dipping sauce.<br><br>
+        
+                    Cheese Quesadillas - $10.99<br>
+                    Flour tortillas filled with melted cheese, served with salsa and guacamole.<br><br>
+        
+                    Vegetarian Spring Rolls - $7.99<br>
+                    Light and crispy spring rolls filled with a medley of vegetables.<br><br>
+        
+                    Sweet Potato Fries - $6.99<br>
+                    Baked or fried sweet potato fries with a choice of dipping sauce.<br><br>
+                </p>
             </div>
-            <div class="dish">
-                <img src="images/appetizer2.jpg" alt="Appetizer 2">
-                <h3>Spinach Artichoke Dip</h3>
-                <p>Creamy spinach and artichoke dip served with tortilla chips.</p>
+        
+            <div class="appetizer-category">
+                <h3 style="text-align:center">Non-Vegetarian</h3>
+                <p>
+                    Chicken Wings - $12.99<br>
+                    Crispy chicken wings tossed in a variety of flavorful sauces.<br><br>
+        
+                    Shrimp Cocktail - $14.99<br>
+                    Chilled shrimp served with a tangy cocktail sauce.<br><br>
+        
+                    Beef Sliders - $11.99<br>
+                    Mini beef burgers with cheese, lettuce, and tomato.<br><br>
+        
+                    Chicken Satay - $10.99<br>
+                    Grilled chicken skewers served with peanut sauce.<br><br>
+        
+                    Crispy Calamari - $13.99<br>
+                    Tender calamari rings coated in a crispy batter, served with marinara sauce.<br><br>
+        
+                    Bacon-Wrapped Scallops - $16.99<br>
+                    Scallops wrapped in bacon and baked to perfection.<br><br>
+        
+                    Spicy Chicken Nachos - $9.99<br>
+                    Nachos topped with spicy chicken, cheese, and jalapeños.<br><br>
+        
+                    Sausage Stuffed Mushrooms - $11.99<br>
+                    Mushrooms stuffed with sausage, breadcrumbs, and herbs.<br><br>
+        
+                    Lamb Kebabs - $15.99<br>
+                    Grilled lamb skewers with a flavorful marinade.<br><br>
+        
+                    Fish Tacos - $12.99<br>
+                    Soft tacos filled with grilled or fried fish, slaw, and sauce.<br><br>
+                </p>
+            </div>
+        </section>
+        <section id="main-courses" class="menu">
+            <h2 style="text-align:center">MAIN COURSES</h2>
+    
+            <div class="appetizer-category">
+                <h3 style="text-align:center">Vegetarian</h3>
+                <p>
+                    Vegetarian Delight - $12.99<br>
+                    Assorted garden vegetables in a rich tomato sauce served with basmati rice.<br><br>
+    
+                    Spinach and Feta Stuffed Portobello - $14.99<br>
+                    Portobello mushrooms stuffed with spinach, feta, and breadcrumbs, baked to perfection.<br><br>
+    
+                    Eggplant Parmesan - $13.99<br>
+                    Breaded and baked eggplant slices layered with marinara sauce and melted cheese.<br><br>
+    
+                    Lentil Curry - $11.99<br>
+                    Hearty lentil curry with aromatic spices, served with naan bread.<br><br>
+    
+                    Vegetable Biryani - $15.99<br>
+                    Fragrant basmati rice cooked with mixed vegetables and aromatic spices.<br><br>
+
+                    Mushroom Risotto - $16.99<br>
+                    Creamy Arborio rice cooked with a medley of mushrooms and Parmesan cheese.<br><br>
+
+                    Vegetable Pad Thai - $14.99<br>
+                    Stir-fried rice noodles with tofu, bean sprouts, and peanuts in a tangy tamarind sauce.<br><br>
+
+                    Quinoa-Stuffed Bell Peppers - $15.99<br>
+                    Bell peppers filled with a mixture of quinoa, black beans, corn, and spices, baked to perfection.<br><br>
+
+                    Butternut Squash Ravioli - $17.99<br>
+                    Homemade ravioli stuffed with roasted butternut squash and topped with a sage-infused brown butter sauce.<br><br>
+
+                    Palak Paneer - $12.99<br>
+                    Indian cottage cheese cubes cooked in a flavorful spinach gravy, served with naan bread.<br><br>
+                </p>
+            </div>
+    
+            <div class="appetizer-category">
+                <h3 style="text-align:center">Non-Vegetarian</h3>
+                <p>
+                    Chicken Alfredo Pasta - $16.99<br>
+                    Grilled chicken breast over fettuccine pasta in a creamy Alfredo sauce.<br><br>
+    
+                    Lamb Kofta Curry - $18.99<br>
+                    Minced lamb kebabs cooked in a flavorful curry sauce, served with rice.<br><br>
+    
+                    Shrimp Scampi Linguine - $20.99<br>
+                    Succulent shrimp sautéed in garlic, butter, and white wine, served over linguine.<br><br>
+    
+                    Beef Steak with Mushroom Sauce - $22.99<br>
+                    Grilled beef steak topped with a savory mushroom sauce, served with mashed potatoes.<br><br>
+    
+                    Salmon Teriyaki - $19.99<br>
+                    Grilled salmon fillet glazed with teriyaki sauce, accompanied by steamed vegetables.<br><br>
+
+                    Chicken Piccata - $18.99<br>
+                    Pan-seared chicken breasts in a lemon and caper sauce, served with angel hair pasta.<br><br>
+
+                    Teriyaki Beef Stir-Fry - $20.99<br>
+                    Sliced beef stir-fried with colorful vegetables in a sweet and savory teriyaki sauce.<br><br>
+
+                    Pesto Shrimp Linguine - $22.99<br>
+                    Shrimp tossed in a basil pesto sauce, served over linguine pasta.<br><br>
+
+                    BBQ Glazed Pork Chops - $19.99<br>
+                    Grilled pork chops glazed with barbecue sauce, accompanied by roasted sweet potatoes.<br><br>
+
+                    Grilled Swordfish Steaks - $21.99<br>
+                    Swordfish steaks marinated and grilled to perfection, served with a citrus herb sauce.<br><br>
+            
+                </p>
+            </div>
+        </section>
+    
+
+        <section id="desserts" class="menu">
+            <h2 style="text-align:center">DESSERTS</h2>
+            <div>
+                <p>
+                    Classic Cheesecake - $9.99<br>
+                    New York-style cheesecake with a graham cracker crust, topped with your choice of fruit compote.<br><br>
+    
+                    Chocolate Mousse - $8.99<br>
+                    Silky and rich chocolate mousse, garnished with whipped cream and chocolate shavings.<br><br>
+    
+                    Fruit Tart - $10.99<br>
+                    Butter pastry crust filled with pastry cream and topped with an assortment of fresh fruits.<br><br>
+    
+                    Tiramisu - $11.99<br>
+                    Layers of coffee-soaked ladyfingers and mascarpone cream, dusted with cocoa powder.<br><br>
+    
+                    Mango Sorbet - $7.99<br>
+                    Refreshing mango sorbet served in a chilled bowl, perfect for a light and fruity dessert.<br><br>
+    
+                    Chocolate Covered Strawberries - $12.99<br>
+                    Juicy strawberries dipped in smooth milk chocolate, an indulgent treat for chocolate lovers.<br><br>
+    
+                    Apple Pie - $10.99<br>
+                    Classic apple pie with a flaky crust, served warm and topped with vanilla ice cream.<br><br>
+                </p>
             </div>
         </section>
 
-        <section id="main-courses">
-            <h2>Main Courses</h2>
-            <div class="dish">
-                <img src="images/main-course1.jpg" alt="Main Course 1">
-                <h3>Grilled Chicken Alfredo</h3>
-                <p>Grilled chicken breast served over fettuccine with Alfredo sauce.</p>
+        <section id="beverages" class="menu">
+            <h2 style="text-align:center">BEVERAGES</h2>
+            <div class="appetizer-category">
+                <h3 style="text-align:center">Wines</h3>
+                <p>
+                    Merlot - $28.99<br>
+                    A medium to full-bodied red wine with soft, velvety tannins and notes of plum.<br><br>
+    
+                    Chardonnay - $24.99<br>
+                    A buttery and oaky white wine with flavors of ripe apple and vanilla.<br><br>
+    
+                    Pinot Noir - $26.99<br>
+                    A light-bodied red wine with elegant flavors of cherry, strawberry, and earth.<br><br>
+    
+                    Sauvignon Blanc - $22.99<br>
+                    A crisp and refreshing white wine with vibrant citrus and tropical fruit notes.<br><br>
+    
+                    Cabernet Sauvignon - $30.99<br>
+                    A bold red wine with rich flavors of blackcurrant, cedar, and hints of spice.<br><br>
+
+                    Malbec - $32.99<br>
+                    A bold and robust red wine with flavors of dark fruit, cocoa, and a touch of smokiness.<br><br>
+
+                    Riesling - $27.99<br>
+                    A sweet and aromatic white wine with notes of peach, apricot, and a hint of honey.<br><br>
+
+                    Zinfandel - $29.99<br>
+                    A fruity and spicy red wine known for its blackberry and peppery characteristics.<br><br>
+
+                    Sauvignon Blanc - $25.99<br>
+                    An herbaceous and zesty white wine with bright acidity and hints of green apple.<br><br>
+
+                    Rosé - $23.99<br>
+                    A dry and refreshing pink wine with flavors of strawberry, watermelon, and citrus.<br><br>
+                </p>
             </div>
-            <div class="dish">
-                <img src="images/main-course2.jpg" alt="Main Course 2">
-                <h3>Vegetarian Lasagna</h3>
-                <p>Layers of pasta, ricotta, and vegetables topped with marinara sauce.</p>
+    
+            <div class="appetizer-category">
+                <h3 style="text-align:center">Non-Alcoholic</h3>
+                <p>
+                    Virgin Mojito - $5.99<br>
+                    A refreshing mocktail with lime, mint, and a touch of sweetness.<br><br>
+    
+                    Berry Blast Smoothie - $6.99<br>
+                    A fruity blend of mixed berries, yogurt, and honey.<br><br>
+    
+                    Cucumber Mint Cooler - $4.99<br>
+                    A cooling beverage with cucumber, mint, and a splash of lime.<br><br>
+    
+                    Tropical Paradise Punch - $7.99<br>
+                    A tropical mix of pineapple, orange, and coconut flavors.<br><br>
+    
+                    Iced Hibiscus Tea - $3.99<br>
+                    Hibiscus tea served over ice, garnished with a lemon wedge.<br><br>
+
+                    Lemon Lavender Sparkler - $4.99<br>
+                    A delightful mix of fresh lemon, lavender syrup, and sparkling water for a floral twist.<br><br>
+
+                    Pineapple Ginger Elixir - $5.99<br>
+                    A tropical blend of pineapple juice, ginger, and a splash of club soda for a fizzy kick.<br><br>
+
+                    Coconut Lime Refresher - $4.99<br>
+                    A hydrating drink with coconut water, lime juice, and a hint of agave nectar.<br><br>
+
+                    Cranberry Orange Spritz - $6.99<br>
+                    A tangy and festive combination of cranberry juice, orange slices, and soda water.<br><br>
+
+                    Minty Matcha Iced Tea - $5.99<br>
+                    A refreshing iced tea infused with matcha green tea and a touch of mint for a cool finish.<br><br>
+                </p>
             </div>
         </section>
-
-        <section id="desserts">
-            <h2>Desserts</h2>
-            <div class="dish">
-                <img src="images/dessert1.jpg" alt="Dessert 1">
-                <h3>Chocolate Lava Cake</h3>
-                <p>Warm chocolate cake with a gooey, molten center.</p>
-            </div>
-            <div class="dish">
-                <img src="images/dessert2.jpg" alt="Dessert 2">
-                <h3>Classic Tiramisu</h3>
-                <p>Layers of coffee-soaked ladyfingers and mascarpone cream.</p>
-            </div>
-        </section>
-
-        <section id="beverages">
-            <h2>Beverages</h2>
-            <div class="dish">
-                <img src="images/beverage1.jpg" alt="Beverage 1">
-                <h3>Fresh Fruit Smoothie</h3>
-                <p>Blended with a mix of fresh fruits and yogurt.</p>
-            </div>
-            <div class="dish">
-                <img src="images/beverage2.jpg" alt="Beverage 2">
-                <h3>Classic Mojito</h3>
-                <p>Refreshing mint and lime cocktail with a splash of soda.</p>
-            </div>
-        </section>
-
-        <section id="brunch">
-            <h2>Brunch</h2>
-            <div class="dish">
-                <img src="images/beverage1.jpg" alt="Beverage 1">
-                <h3>Fresh Fruit Smoothie</h3>
-                <p>Blended with a mix of fresh fruits and yogurt.</p>
-            </div>
-            <div class="dish">
-                <img src="images/beverage2.jpg" alt="Beverage 2">
-                <h3>Classic Mojito</h3>
-                <p>Refreshing mint and lime cocktail with a splash of soda.</p>
-            </div>
-        </section>
-
     </main>
 
     <footer>
