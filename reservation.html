@@ -5,13 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon"  href="Images/icon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" />
     <title>Reservation - My Restaurant</title>
+
+    <style>
+        h1{
+            text-align: center;  
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 700;   
+        }
+        p{
+            text-align: center;  
+            margin-left: 25px; 
+            margin-right: 25px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .glistening {
+            transition: filter 0.3s ease-out, transform 0.3s ease-out;
+        }
+
+        .glistening:hover {
+            filter: brightness(1.25);
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <a href="index.html"><img src="Images/restlogo.png" alt="Restaurant Logo"></a>
-        <h2>Make a Reservation</h2>
+        <h1 style="font-family: 'Lato', sans-serif;">Make a Reservation</h1>
         <nav>
             <ul>
                 <li><a href="menu.html">Menu</a></li>
@@ -23,36 +46,72 @@
     </header>
 
     <main>
+        <section>
+            <div id="din">
+                <h1 style="color:#540b0e; text-decoration: underline;">Event By Anton's</h1>
+                <p>From the moment guests arrive, they are taken on a sensory journey. This starts with greetings by our hosts and evolves with the scent of our Anton's Home candles and the sounds of our custom-curated soundtrack. 
+                    Anton's interprets the vibrant cuisine of regional India in a modern, approachable way. Our beverage program, featuring seasonal G&Ts, is inspired by the culture and spirit of India, using the finest ingredients and flavors in modern interpretations of storied classics. 
+                    Our elegant private dining room is an exquisite destination to enjoy intimate dinners, joyous brunches, and special occasions of all kinds.</p>
+
+                <p>We can't wait to celebrate with you.</p>
+                <br><br>
+        </div>
+        <section style="display: flex;">
+            <div>
+                <h1 style="color:#540b0e;">MAIN DINING ROOM</h1>
+                <img style="width: 85%; margin-left: 40px;" src="Images/Main.jpg" alt="Main Dining" class="glistening" onmouseover="addGlisten()" onmouseout="removeGlisten()">>
+                <p>The light-filled front dining area can be cleared for cocktails and passed bites (in tandem with our bar area), replaced with a dance floor, or configured to seat a large group across one or more long tables. The sultry rear dining area features built-in leather banquettes with room for longer tables at the center and perimeter, perfect for seated events.</p>
+            </div>
+            <div>
+                <h1 style="color:#540b0e;">PRIVATE DINING ROOM</h1>
+                <img style="width: 85%; margin-left: 40px;" src="Images/Private.jpg" alt="Private Dining" class="glistening" onmouseover="addGlisten()" onmouseout="removeGlisten()">>
+                <p>Our private dining room is an exquisite destination for you to gather your loved ones for an intimate meal hidden beneath one of NYC's hottest restaurants. Enjoy favorites from our dinner menu, cocktails and bites, or our inventive New York-meets-Indian brunch menu (think everything bagel naan, cardamom waffles, and our take on a burger).</p>
+            </div>
+        </section>
+        <br><br>
+        </section>
+        <div>
         <section id="reservation-info">
-            <h2>Reservation Information</h2>
+            <h2 style="text-align: center;">Reservation Information</h2>
             <p>Book a table for an exquisite dining experience. Fill in the details below to secure your reservation.</p>
         </section>
 
         <section id="reservation-form">
-            <h2>Reservation Form</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+            <br>
+            <div>
+                <h2 style="text-align: center;">Reservation Form</h2>
+                <form onsubmit="handleSubmit(); return false;">
+                    <ul style="margin-left: 200px;">
+                        <li><label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required></li><br>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                        <li><label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required></li><br>
 
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" required>
+                        <li><label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" required></li><br>
 
-                <label for="date">Date:</label>
-                <input type="date" id="date" name="date" required>
+                        <li><label for="date">Date:</label>
+                        <input type="date" id="date" name="date" required></li><br>
 
-                <label for="time">Time:</label>
-                <input type="time" id="time" name="time" required>
+                        <li><label for="time">Time:</label>
+                        <input type="time" id="time" name="time" required></li><br>
 
-                <label for="guests">Number of Guests:</label>
-                <input type="number" id="guests" name="guests" min="1" required>
+                        <li><label for="guests">Number of Guests:</label>
+                        <input type="number" id="guests" name="guests" min="1" max="30" required></li><br>
 
-                <button type="submit">Submit Reservation</button>
-            </form>
+                        <li><button type="submit">Submit Reservation</button></li>
+                    </ul>
+                </form>
+            </div>
         </section>
     </main>
+    <script>
+        function handleSubmit() {
+            alert("Thank you for making a reservation at Anton's! A confirmation e-mail was sent to your registered E-mail ID.");
+            }
+    </script>
+   
 
     <footer>
         <p>&copy; 2024 Anton's. All rights reserved.</p>
