@@ -133,6 +133,41 @@ nav ul li {
 .sub-heading ~ #our-team {
     margin-top: 0.5em; 
 }
+.menu-section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.content {
+    flex: 1;
+    margin-left:20px;
+}
+
+.content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.button {
+    display:inline-block;
+    padding: 10px 20px;
+    background-color: #370617;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-left: 210px;
+}
+
+.button:hover {
+    background-color: #555;
+}
 
 
 main {
