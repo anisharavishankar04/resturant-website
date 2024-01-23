@@ -31,5 +31,5 @@ function animateLoop(elementId) {
         setTimeout(animate, (textToErase.length - 1) * 100 + 50); // Delay before starting the next loop
     }
 
-    animate(); // Start the animation loop
+    animate(); 
 }
